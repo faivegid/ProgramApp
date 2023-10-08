@@ -62,5 +62,11 @@ namespace ProgramApp.AppService.Programs
 
             return _mapper.Map<ProgramDto>(program);
         }
+
+        public async Task<ProgramPreview> Preview(Guid programId)
+        {
+            var program = await _unitOfWork.Programs.GetById(programId);
+            return _mapper.Map<ProgramPreview>(program);
+        }
     }
 }

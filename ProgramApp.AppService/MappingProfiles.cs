@@ -14,6 +14,9 @@ namespace ProgramApp.AppService
             CreateMap<Program, ProgramDto>().ReverseMap();
             CreateMap<ApplicationTemplate, ApplicationTemplateDto>().ReverseMap();
             CreateMap<ApplicationStage, ApplicationStageDto>();
+            CreateMap<Program, ProgramPreview>()
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.ProgramType == Shared.Enums.ProgramType.FullyRemote ? "Fullly Remote" : src.Location))
+                .ReverseMap();
         }
     }
 }

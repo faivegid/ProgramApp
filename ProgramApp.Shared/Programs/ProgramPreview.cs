@@ -2,7 +2,7 @@
 
 namespace ProgramApp.Shared.Programs
 {
-    public class ProgramDto
+    public class ProgramPreview
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
@@ -16,10 +16,6 @@ namespace ProgramApp.Shared.Programs
         public DateTime ApplicationOpenDate { get; set; }
         public DateTime ApplicationCloseDate { get; set; }
         public int Duration { get; set; }
-        public ProgramLocation ProgramLocation { get; set; }
         public string Location { get; set; }
-        public EducationLevel MinimumQualification { get; set; }
-        public int MaxNumberOfApplications { get; set; }
-        public string CoverImage { get; set; }
     }
 }

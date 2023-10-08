@@ -44,5 +44,10 @@ namespace ProgramApp.Controllers
             var data = await _programAppService.UpdateProgram(programId, updateRto);
             return ApiResponse.Success(data);
         }
+
+        public async Task<ApiResponse<ProgramPreview>> Preview([FromRoute] Guid programId)
+        {
+
+        }
     }
 }

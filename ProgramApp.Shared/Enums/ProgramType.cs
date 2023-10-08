@@ -3,6 +3,6 @@
     public enum ProgramType
     {
         FullTime,
-        PartTime
+        FullyRemote
     }
 }
