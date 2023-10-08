@@ -5,7 +5,7 @@ using ProgramApp.Shared.Responses;
 
 namespace ProgramApp.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/template")]
     [ApiController]
     public class ApplicationTemplateController : ControllerBase
     {
