@@ -9,6 +9,7 @@ namespace ProgramApp.AppService.Programs
         Task<ProgramDto> CreateProgram(ProgramCreateRto createRto);
         Task<ProgramDto> GetProgram(Guid programId);
         Task<PaginationData<ProgramDto>> GetProgramList(PaginationRequest request);
+        Task<ProgramPreview> Preview(Guid programId);
         Task<ProgramDto> UpdateProgram(Guid programId, ProgramUpdateRto updateRto);
     }
 }

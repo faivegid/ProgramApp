@@ -10,7 +10,7 @@ namespace ProgramApp.Domain.Programs
         public string Title { get; set; }
         public string Summary { get; set; }
         public string Description { get; set; }
-        public string ProgramNenefits { get; set; }
+        public string ProgramBenefits { get; set; }
         public List<string> Skills { get; set; }
         public string ApplicationCriteria { get; set; }
         public ProgramType ProgramType { get; set; }
