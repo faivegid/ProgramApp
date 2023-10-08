@@ -5,4 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProgramApp.Domain\ProgramApp.Domain.csproj" />
+    <ProjectReference Include="..\ProgramApp.Shared\ProgramApp.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

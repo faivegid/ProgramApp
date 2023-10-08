@@ -1,4 +1,6 @@
 using ProgramApp;
+using ProgramApp.AppService;
+using ProgramApp.Domain;
 using ProgramApp.Middleware;
 using ProgramApp.Shared;
 
@@ -11,6 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.ConfigureApiBehaviorOptions();
 builder.Services.AddDb(builder.Configuration);
 builder.Services.ConfigureSharedLibrary(builder.Configuration);
+builder.Services.ConfigureDomain();
+builder.Services.ConfigureAppServices();
+builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
 var app = builder.Build();
 

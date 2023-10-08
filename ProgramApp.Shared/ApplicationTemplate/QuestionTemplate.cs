@@ -12,7 +12,6 @@ namespace ProgramApp.Shared.ApplicationTemplate
         public bool IsMandatory { get; set; }
         public bool Show { get; set; }
         public VideoQuestionTemplate VideoQuestionTemplate { get; set; }
-        public Guid? SectionId { get; set; }
         public Guid? QuestionGroupId { get; set; }
     }
 }
