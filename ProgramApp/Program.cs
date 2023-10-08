@@ -1,11 +1,16 @@
+using ProgramApp;
+using ProgramApp.Middleware;
+using ProgramApp.Shared;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.ConfigureApiBehaviorOptions();
+builder.Services.AddDb(builder.Configuration);
+builder.Services.ConfigureSharedLibrary(builder.Configuration);
 
 var app = builder.Build();
 
@@ -16,6 +21,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<ExceptionHandleMiddleware>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
